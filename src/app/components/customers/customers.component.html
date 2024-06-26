@@ -1,0 +1,82 @@
+ <div class="dashboardBg bg-no-repeat bg-cover">
+        <!-- Start Header -->
+        <app-header></app-header>
+    
+        <!-- End Header -->
+        <div
+            class="w-full h-full bg-white flex items-start md:pl-0 pl-5 2xl:pr-20 xl:pr-10 pr-5 2xl:gap-[84px] xl:gap-10 gap-5 sm:mt-[84px] mt-[72px] relative bg-[url('../images/dashboardbodybg.png')] bg-no-repeat bg-cover bg-fixed">
+            <button type="button"
+                class="w-[38px] h-[38px] rounded-[10px] bg-white md:fixed absolute md:top-28 top-5 2xl:left-[370px] md:left-[280px] flex justify-center items-center">
+                <img src="../assets/images/backArrow.png" alt="backArrow">
+            </button>
+  
+           <app-navbar></app-navbar>
+  
+        <!-- Start DashBoard Body ../assets/images/filterIcon.svg url : .../assets/imagesdashboardbodybg.png-->
+        <div class="overflow-hidden mt-5 ml-auto 2xl:w-[calc(100%-475px)] md:w-[calc(100%-320px)] w-full" id="mobileBg">
+            <div class="w-full w-dashBoardTCustomWidth pb-20">
+               
+                
+                <div class="mt-5">
+                    <div class="flex items-center justify-between mb-2">
+                        <p class="text-start font-roboto font-medium text-3xl text-[#5A9CF7]">
+                            Customers</p>
+                        <a href="#"><img src="../assets/images/dropDownIocn.svg" alt="dropDownIcon"></a>
+                    </div>
+                    <div class="relative overflow-x-auto scrollbar-hidden">
+                        <table
+                            class="text-sm text-left rtl:text-right w-full border-separate border-spacing-y-2 min-w-[900px] table-fixed overflow-auto">
+                            <thead
+                                class="font-roboto font-medium text-fifteen leading-[17.58px] text-black bg-[#DDEBFF]">
+                                <tr class="h-[59px]">
+                                    <th scope="col" class="2xl:pl-10 pl-4 xl:pr-4 pr-1.5 rounded-ss-[15px] w-1/4">
+                                        Order ID
+                                    </th>
+                                    <th scope="col" class="2xl:pl-10 pl-4 xl:pr-4 pr-1.5 w-1/4">
+                                        Customer Name
+                                    </th>
+                                    <th scope="col" class="2xl:pl-10 pl-4 xl:pr-4 pr-1.5 w-[18%]">
+                                        Address
+                                    </th>
+                                    <th scope="col" class="2xl:pl-10 pl-4 xl:pr-4 pr-1.5 w-1/4">
+                                        Registration Date
+                                    </th>
+                                    <th scope="col" class="2xl:pl-10 pl-4 xl:pr-4 pr-1.5 rounded-se-[15px] w-[5%]">
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                              @for(customer of Customers; track customer.Id) {
+                                <tr
+                                    class="h-[59px] font-roboto font-medium text-[#3D3D3D] 2xl:text-lg text-base bg-white">
+                                    <th scope="row"
+                                        class="2xl:pl-10 pl-4 pr-4 border-r-[10px] border-r-white bg-bgCell border-l-[6px] border-[#5A9CF7]">
+                                       #{{customer.Id}}
+                                    </th>
+                                    <td class="2xl:pl-10 pl-4 pr-4 bg-bgCell border-r-[10px] border-r-white">
+                                        {{customer.FirstName}} {{customer.LastName}}
+                                    </td>
+                                    <td
+                                        class="2xl:pl-10 pl-4 pr-4 border-r-[10px] border-r-white bg-[#FFCB03] text-white">
+                                       <p>{{customer.Address}}</p>
+                                    </td>
+                                    <td class="2xl:pl-10 pl-4 pr-4 bg-bgCell border-r-[10px] border-r-white">
+                                         {{customer.RegistrationDate}}
+                                    </td>
+                                    <td class="">
+                                        <a href="#" class="flex items-center flex-col gap-[3px]">
+                                            <div class="w-three h-three rounded-full bg-black"></div>
+                                            <div class="w-three h-three rounded-full bg-black"></div>
+                                            <div class="w-three h-three rounded-full bg-black"></div>
+                                        </a>
+                                    </td>
+                                </tr>
+                                  }
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End DashBoard Body -->
+      </div>
