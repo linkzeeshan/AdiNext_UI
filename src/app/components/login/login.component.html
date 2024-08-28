@@ -1,47 +1,46 @@
-
-
 <div class="pt-8 pb-20 LoginBg bg-[url('../images/LogInBg.png')] bg-no-repeat bg-cover h-[100vh]">
     <img src="../assets/images/LogInLeft.png" alt="loginleft" class="absolute bottom-0 left-0 pointer-events-none	">
-    <img src="../assets/images/LogInTopright.png" alt="logintopright" class="absolute top-0 right-0 pointer-events-none	">
+    <img src="../assets/images/LogInTopright.png" alt="logintopright"
+        class="absolute top-0 right-0 pointer-events-none	">
     <div class="flex justify-center">
         <img class="" src="../assets/images/LoginPageLogo.png" alt="imageLogo">
     </div>
     <div class="w-full max-w-md mx-auto mt-24 px-2">
         <h5 class="font-roboto text-[34px] font-bold leading-10 text-center text-customBlack">Hello!</h5>
-        <p class="mt-2.5 font-roboto text-[22px] font-normal leading-[25.78px] text-center text-[#3E3B4E]">Sign In to Get
+        <p class="mt-2.5 font-roboto text-[22px] font-normal leading-[25.78px] text-center text-[#3E3B4E]">Sign In to
+            Get
             Started</p>
         <form [formGroup]="loginForm">
-        <div
-            class="w-full flex gap-0 border border-[#ED1C24] sm:h-[69px] h-14 shadow-inputFShadow rounded-[10px] mt-11">
-            <div class="flex items-center justify-center h-full ml-[31px]">
-                <img src="../assets/images/mailIcon.svg" alt="mailIcon">
+            <div
+                class="w-full flex gap-0 border border-[#ED1C24] sm:h-[69px] h-14 shadow-inputFShadow rounded-[10px] mt-11">
+                <div class="flex items-center justify-center h-full ml-[31px]">
+                    <img src="../assets/images/mailIcon.svg" alt="mailIcon">
+                </div>
+                <input type="email"
+                    class="pl-4 w-full h-full pr-2 bg-white  text-black outline-none rounded-[10px] placeholder:font-roboto font-roboto placeholder:text-[#2B263A] placeholder:text-lg text-lg placeholder:font-semibold font-semibold placeholder:leading-[21.09px]"
+                    placeholder="Johndoe@email.com" [formControl]="email">
             </div>
-            <input type="email"
-                class="pl-4 w-full h-full pr-2 bg-white  text-black outline-none rounded-[10px] placeholder:font-roboto font-roboto placeholder:text-[#2B263A] placeholder:text-lg text-lg placeholder:font-semibold font-semibold placeholder:leading-[21.09px]"
-                placeholder="Johndoe@email.com" [formControl] ="email">
-        </div>
-        <h5 class="" style="color: red;" [hidden]="email.valid || email.untouched">Enter correct email</h5>
+            <h5 class="" style="color: red;" [hidden]="email.valid || email.untouched">Enter correct email</h5>
 
-        <div
-            class="w-full flex gap-0 border border-[#ED1C24] sm:h-[69px] h-14 shadow-inputFShadow rounded-[10px] mt-[30px]">
-            <div class="flex items-center justify-center h-full ml-[31px]">
-                <img src="../assets/images/lock.svg" alt="lockIcon">
+            <div
+                class="w-full flex gap-0 border border-[#ED1C24] sm:h-[69px] h-14 shadow-inputFShadow rounded-[10px] mt-[30px]">
+                <div class="flex items-center justify-center h-full ml-[31px]">
+                    <img src="../assets/images/lock.svg" alt="lockIcon">
+                </div>
+                <input type="password"
+                    class="pl-4 w-full h-full pr-2 bg-white  text-black outline-none rounded-[10px] placeholder:font-roboto font-roboto placeholder:text-[#6C6979] placeholder:text-lg text-lg placeholder:font-normal placeholder:leading-[21.09px]"
+                    placeholder="Password" [formControl]="password">
+                <div class="flex items-center justify-center  mr-5">
+                    <img class="w-[26px] h-[26px]" src="../assets/images/eyeIocn.svg" alt="Icon">
+
+                </div>
+
             </div>
-            <input type="password"
-                class="pl-4 w-full h-full pr-2 bg-white  text-black outline-none rounded-[10px] placeholder:font-roboto font-roboto placeholder:text-[#6C6979] placeholder:text-lg text-lg placeholder:font-normal placeholder:leading-[21.09px]"
-                placeholder="Password" [formControl] ="password">
-            <div class="flex items-center justify-center  mr-5">
-                <img class="w-[26px] h-[26px]" src="../assets/images/eyeIocn.svg" alt="Icon">
-                
-            </div>
-            
-        </div>
-        <h5 style="color: red;" [hidden]="password.valid || password.untouched">Enter correct password</h5>
-        <button type="button"
-            class="w-full sm:h-[69px] h-14 font-roboto bg-[#ED1C24] shadow-inputFShadow rounded-[10px] mt-fifty text-center text-[22px] font-semibold leading-[25.78px] text-white"
-             (click)="onLogin()"
-             [disabled]="loginForm.invalid">Sign
-            In</button>
+            <h5 style="color: red;" [hidden]="password.valid || password.untouched">Enter correct password</h5>
+            <button type="button"
+                class="w-full sm:h-[69px] h-14 font-roboto bg-[#ED1C24] shadow-inputFShadow rounded-[10px] mt-fifty text-center text-[22px] font-semibold leading-[25.78px] text-white"
+                (click)="login()" [disabled]="loginForm.invalid">Sign
+                In</button>
         </form>
     </div>
 </div>

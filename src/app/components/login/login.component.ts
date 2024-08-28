@@ -14,14 +14,14 @@ import { Router } from '@angular/router';
   templateUrl: './login.component.html',
   styleUrl: './login.component.css'
 })
-export class LoginComponent implements OnInit{
+export class LoginComponent implements OnInit {
   /**
    *
    */
   ngOnInit(): void {
-    
+
   }
-   loginDto = {
+  loginDto = {
     "Email": "shan@example.com",
     "Password": "Z.a785785"
   }
@@ -49,19 +49,18 @@ export class LoginComponent implements OnInit{
     // Pass along the hero id if available
     // so that the HeroList component can select that item.
     //this.router.navigate(['/heroes', { id: heroId }]);
-    
+
     this.router.navigate(['/home']);
   }
-  onLogin(){
-this.http.post('https://localhost:44346/api/Account/Login', this.loginDto)
-.subscribe((res:any) =>
-{
-  if(res.Flag){
-    console.log(res.Token);
-    localStorage.setItem('token', res.Token);
-    this.router.navigateByUrl('/home');
-  }
-}
-)
+  onLogin() {
+    this.http.post('https://localhost:44346/api/Account/Login', this.loginDto)
+      .subscribe((res: any) => {
+        if (res.Flag) {
+          console.log(res.Token);
+          localStorage.setItem('token', res.Token);
+          this.router.navigateByUrl('/home');
+        }
+      }
+      )
   }
 }
