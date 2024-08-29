@@ -1,0 +1,26 @@
+.arrow-button{
+    z-index: 99;
+    left: 330px;
+    top: 7.7rem;
+    background: #ffffff;
+    box-shadow: 0px 0px 10px #c0c0c02b;
+    
+}
+.create-order-buttons-bottom{
+    gap: 12px;
+    justify-content: end;
+    margin-bottom: 50px;
+}
+
+.create-order-buttons-bottom .cancel{
+    background: white;
+    color: red;
+    font-size: 16px;
+    min-width: 150px;
+}
+.create-order-buttons-bottom .create{
+    background: #000;
+    min-width: 150px;
+    font-size: 16px;
+
+}

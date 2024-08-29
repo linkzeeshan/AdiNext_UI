@@ -12,6 +12,7 @@ import { authGuard } from './Auth/auth.guard';
 import { CreateOrUpdateCustomerComponent } from './components/customers/create-or-update-customer/create-or-update-customer.component';
 import { CustomersComponent } from './components/customers/customers.component';
 import { OrderDetailsComponent } from './components/orders/order-details/order-details/order-details.component';
+import { CreateNewOrderComponent } from './components/create-new-order/create-new-order.component';
 
 export const routes: Routes = [
     { path: '', redirectTo: 'login', pathMatch: 'full' },
@@ -27,6 +28,7 @@ export const routes: Routes = [
     { path: 'orderdetails', component: OrderDetailsComponent },
     { path: 'CustomerInfo', component: CreateOrUpdateCustomerComponent },
     { path: 'Customers', component: CustomersComponent },
+    { path: 'create-new-order', component: CreateNewOrderComponent },
 
     // { path: 'home', component: HomeComponent, canActivate:[authGuard] },
     // { path: 'design', component: DesignComponent, canActivate:[authGuard]},

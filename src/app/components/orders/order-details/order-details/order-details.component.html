@@ -19,30 +19,30 @@
         <div
             class="w-full h-full bg-white flex items-start md:pl-0 pl-5 2xl:pr-20 xl:pr-10 pr-5 2xl:gap-[84px] xl:gap-10 gap-5 sm:mt-[84px] mt-[72px] relative bg-[url('../images/dashboardbodybg.png')] bg-no-repeat bg-cover bg-fixed">
             <button type="button"
-                class="w-[38px] h-[38px] rounded-[10px] bg-white md:fixed absolute md:top-28 top-5 2xl:left-[370px] md:left-[280px] flex justify-center items-center">
+                class="arrow-button w-[38px] h-[38px]  rounded-[10px] bg-white md:fixed absolute md:top-28 top-5 2xl:left-[370px] md:left-[280px] flex justify-center items-center">
                 <img src="../assets/images/backArrow.png">
             </button>
   
            <app-navbar></app-navbar>
   
-        <div class="ml-auto 2xl:w-[calc(100%-420px)] md:w-[calc(100%-340px)] w-full flex lg:flex-nowrap flex-wrap">
+        <div class="ml-auto 2xl:w-[calc(100%-390px)] md:w-[calc(100%-340px)] w-full flex lg:flex-nowrap flex-wrap">
                 <!-- Start DashBoard Body -->
-                <div class="overflow-hidden w-full md:mt-0 mt-10 mr-auto 2xl:w-[calc(100%-400px)] lg:w-[calc(100%-340px)]"
+                <div class="overflow-hidden w-full md:mt-0 mt-10 mr-auto 2xl:w-[calc(100%-365px)] lg:w-[calc(100%-340px)]"
                     id="mobileBg">
                     <div class="w-full w-dashBoardTCustomWidth pb-10">
-                        <div class="flex items-center w-full lg:my-14 md:my-6 mt-8 mb-6 2xl:gap-10 sm:gap-6 gap-4">
+                        <div class="flex items-center w-full lg:my-6 md:my-6 mt-3 mb-3 2xl:gap-10 sm:gap-6 gap-4">
                             <a href="#">
                                 <img src="../assets/images/leftArrow.png" alt="leftarrow" class="sm:w-auto w-2 sm:h-auto h-4">
                             </a>
                             <h5
-                                class="font-inter font-semibold xl:text-[35px] sm:text-2xl text-xl xl:leading-[42px] text-black">
+                                class="font-inter font-semibold xl:text-[22px] sm:text-2xl text-xl xl:leading-[42px] text-black">
                                 In Process Orders > #8AB123454S
                             </h5>
                         </div>
                         <div class="">
                             <div
                                 class="relative overflow-x-auto scrollbar-hidden border border-[#dadada] rounded-[10px] bg-white">
-                                <h5 class="text-xl leading-6 font-semibold text-[#2B2B2B] p-5 font-inter">
+                                <h5 class="text-xl leading-6 font-semibold text-[#2B2B2B] xl:text-[16px] p-3 font-inter">
                                     Design 1</h5>
                                 <table
                                     class="text-sm text-left rtl:text-right w-full min-w-max overflow-auto table-fixed">
@@ -56,12 +56,12 @@
                                                     class="w-5 h-5 bg-[#FDD4D5] rounded-sm font-inter font-bold text-black flex justify-center items-center">
                                                     01</div>
                                             </th>
-                                            <td class="pl-5 pr-8 py-3 w-28">
-                                                <div class="w-14 h-14 rounded-[15px]">
+                                            <td class="pl-4 pr-4 py-3 w-20">
+                                                <div class="w-10 h-10 rounded-[15px]">
                                                     <img src="../assets/images/processDesign_1.png" alt="processdesing1">
                                                 </div>
                                             </td>
-                                            <td class="pr-8 py-3">
+                                            <td class="pr-8 py-3 text-[12px]">
                                                 Shirts designs here, please approve this design, if you don’t
                                                 like it
                                                 then press revision.
@@ -208,12 +208,12 @@
                                                     class="w-5 h-5 bg-[#FDD4D5] rounded-sm font-inter font-bold text-black flex justify-center items-center">
                                                     02</div>
                                             </th>
-                                            <td scope="row" class="pl-5 pr-8 py-3 w-28">
-                                                <div class="w-14 h-14 rounded-[15px]">
+                                            <td scope="row" class="pl-4 pr-4 py-3 w-20">
+                                                <div class="w-10 h-10 rounded-[15px]">
                                                     <img src="../assets/images/processDesign_2.png" alt="processdesing1">
                                                 </div>
                                             </td>
-                                            <td class="pr-8 py-3">
+                                            <td class="pr-8 py-3 text-[12px]">
                                                 Shirts designs here, please approve this design, if you don’t
                                                 like it
                                                 then press revision.
@@ -340,12 +340,12 @@
                                                     class="w-5 h-5 bg-[#FDD4D5] rounded-sm font-inter font-bold text-black flex justify-center items-center">
                                                     03</div>
                                             </th>
-                                            <td scope="row" class="pl-5 pr-8 py-3 w-28">
-                                                <div class="w-14 h-14 rounded-[15px]">
+                                            <td scope="row" class="pl-4 pr-4 py-3 w-20">
+                                                <div class="w-10 h-10 rounded-[15px]">
                                                     <img src="../assets/images/processDesign_3.png" alt="processdesing3">
                                                 </div>
                                             </td>
-                                            <td class="pr-8 py-3">
+                                            <td class="pr-8 py-3 text-[12px]">
                                                 Shirts designs here, please approve this design, if you don’t
                                                 like it
                                                 then press revision.
@@ -468,6 +468,57 @@
                                     </tbody>
                                 </table>
 
+                                <table>
+                                    <tbody>
+                                        <tr
+                                        class="text-sm leading-[18.15px] py-3 font-inter text-black border-t border-[#EBEBEB]">
+                                        <th scope="row" class="w-5 h-5">
+                                            <div
+                                                class="w-5 h-5 bg-[#FDD4D5] rounded-sm font-inter font-bold text-black flex justify-center items-center">
+                                                03</div>
+                                        </th>
+                                        <td scope="row" class="pl-4 pr-4 py-3 w-20">
+                                            <div class="w-10 h-10 rounded-[15px]">
+                                                <img src="../assets/images/processDesign_3.png" alt="processdesing3">
+                                            </div>
+                                        </td>
+                                        <td class="pr-8 py-3 text-[12px]">
+                                            Shirts designs here, please approve this design, if you don’t
+                                            like it
+                                            then press revision.
+                                        </td>
+                                        <td class="py-3 pr-5 w-28">
+                                            <div
+                                                class="bg-[#ED1C24] py-3 text-white text-center text-[10px] font-bold w-20 h-4 rounded-xl leading-[0px]">
+                                                In Revision </div>
+                                        </td>
+                                    </tr>
+                                    <tr
+                                    class="text-sm leading-[18.15px] py-3 font-inter text-black border-t border-[#EBEBEB]">
+                                    <th scope="row" class="w-5 h-5">
+                                        <div
+                                            class="w-5 h-5 bg-[#FDD4D5] rounded-sm font-inter font-bold text-black flex justify-center items-center">
+                                            03</div>
+                                    </th>
+                                    <td scope="row" class="pl-4 pr-4 py-3 w-20">
+                                        <div class="w-10 h-10 rounded-[15px]">
+                                            <img src="../assets/images/processDesign_3.png" alt="processdesing3">
+                                        </div>
+                                    </td>
+                                    <td class="pr-8 py-3 text-[12px]">
+                                        Shirts designs here, please approve this design, if you don’t
+                                        like it
+                                        then press revision.
+                                    </td>
+                                    <td class="py-3 pr-5 w-28">
+                                        <div
+                                            class="bg-[#ED1C24] py-3 text-white text-center text-[10px] font-bold w-20 h-4 rounded-xl leading-[0px]">
+                                            In Revision </div>
+                                    </td>
+                                </tr>
+                                    </tbody>
+                                </table>
+
                             </div>
                         </div>
                     </div>
@@ -476,26 +527,26 @@
 
                 <!-- Start Chat Section -->
                 <aside
-                    class="2xl:max-w-[476px] lg:max-w-80 w-full h-full 2xl:p-8 p-5 bg-white bg-opacity-90 shadow-SideMenuShadow lg:fixed right-0 font-inter">
+                    class="2xl:max-w-[410px] lg:max-w-80 w-full h-full 2xl:p-8 p-5 bg-white bg-opacity-90 shadow-SideMenuShadow lg:fixed right-0 font-inter">
                     <div class="h-full lg:pb-12 pb-6 overflow-auto scrollbar-hidden">
                         <p class="text-[21px] leading-[25.41px] font-semibold text-black">Order Conversation</p>
                         <div
-                            class="2xl:mt-6 mt-5 bg-[#FD8387] rounded-[10px] w-full 2xl:h-36 h-32 relative flex justify-center items-center">
+                            class="2xl:mt-6 mt-5 bg-[#FD8387] rounded-[10px] w-full 2xl:h-28 h-28 relative flex justify-center items-center overflow-hidden">
                             <img src="../assets/images/orderConversation_1.png" alt="conversation_1"
                                 class="absolute left-0 top-0">
                             <img src="../assets/images/orderConversation_2.png" alt="conversation_1"
                                 class="absolute left-0 bottom-0">
                             <div class="flex gap-2.5 items-center justify-center relative">
                                 <div
-                                    class="bg-white bg-opacity-50 rounded-[15px] text-white 2xl:text-[21px] text-lg leading-[25.41px] font-semibold 2xl:py-5 py-3 2xl:px-7 sm:px-5 px-3">
+                                    class="bg-white bg-opacity-50 rounded-[15px] text-white 2xl:text-[16px] text-lg leading-[25.41px] font-semibold 2xl:py-2 py-3 2xl:px-7 sm:px-5 px-3">
                                     <span>Tuesday</span>
                                 </div>
                                 <div
-                                    class="bg-white bg-opacity-50 rounded-[15px] text-white 2xl:text-[21px] text-lg leading-[25.41px] font-semibold 2xl:py-5 py-3 2xl:px-7 sm:px-5 px-3">
+                                    class="bg-white bg-opacity-50 rounded-[15px] text-white 2xl:text-[16px] text-lg leading-[25.41px] font-semibold 2xl:py-2 py-3 2xl:px-7 sm:px-5 px-3">
                                     <span>Feb</span>
                                 </div>
                                 <div
-                                    class="bg-white bg-opacity-50 rounded-[15px] text-white 2xl:text-[21px] text-lg leading-[25.41px] font-semibold 2xl:py-5 py-3 2xl:px-7 sm:px-5 px-3">
+                                    class="bg-white bg-opacity-50 rounded-[15px] text-white 2xl:text-[16px] text-lg leading-[25.41px] font-semibold 2xl:py-2 py-3 2xl:px-7 sm:px-5 px-3">
                                     <span>12</span>
                                 </div>
                             </div>
@@ -532,13 +583,13 @@
                                 <div class="2xl:w-[calc(100%-38px)] w-[calc(100%-32px)]">
                                     <p class="text-base leading-5 font-semibold">Designer:</p>
                                     <div class="mt-4 flex gap-2.5 items-center flex-wrap">
-                                        <div class="h-[102px] w-[102px] rounded-[15px]">
+                                        <div class="h-[90px] w-[90px] rounded-[15px]">
                                             <img src="../assets/images/Design-1.png" alt="design1">
                                         </div>
-                                        <div class="h-[102px] w-[102px] rounded-[15px]">
+                                        <div class="h-[90px] w-[90px] rounded-[15px]">
                                             <img src="../assets/images/Design_2.png" alt="design2">
                                         </div>
-                                        <div class="h-[102px] w-[102px] rounded-[15px]">
+                                        <div class="h-[90px] w-[90px] rounded-[15px]">
                                             <img src="../assets/images/Design_3.png" alt="design3">
                                         </div>
                                     </div>
@@ -614,7 +665,7 @@
                                 </button>
                             </div>
                             <div
-                                class="2xl:my-10 lg:my-6 mt-7 flex sm:flex-nowrap flex-wrap sm:gap-2.5 gap-4 items-center">
+                                class="2xl:my-10 lg:my-6 mt-7 flex sm:flex-nowrap flex-wrap sm:gap-2.5 gap-4 items-center chat-buttons">
                                 <button
                                     class="2xl:text-lg text-base leading-[21.09px] font-semibold font-roboto bg-[#0FE177] 2xl:py-6 py-3 text-white rounded-[10px] sm:w-1/2 w-full">Approve
                                     Design</button>
