@@ -7,11 +7,25 @@ class="header-bg w-full sm:py-5 py-4 px-5 2xl:px-[103px] bg-white flex items-cen
     </div>
     <div class="bg-gray-50 w-[1px] sm:h-[100px] h-[87px] absolute -top-9 right-0"></div>
 </div>
-<div class="flex items-center md:gap-[38px] sm:gap-5 gap-3">
+    
+
+<div class="flex items-center md:gap-[38px] sm:gap-5 gap-3 pointer">
     <img src="../assets/images/bell.svg" alt="bellIcon">
-    <div class="w-10 h-10 rounded-full bg-[#D9D9D9]">
+    <div id="dropdownDefaultButton" data-dropdown-toggle="dropdown" class="w-10 h-10 rounded-full bg-[#D9D9D9]">
         <img src="../assets/images/profileImage.png" alt="profileimage">
     </div>
+       <!-- Dropdown menu -->
+       <div id="dropdown" class=" dropdown-box z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700">
+        <ul class="py-2 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownDefaultButton">
+          <li>
+            <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Settings</a>
+          </li>
+          <li>
+            <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Sign out</a>
+          </li>
+        </ul>
+    </div>
+
     <div class="md:hidden block" onclick="mobileMenuFunction()">
         <img src="../assets/images/mobile-menu.svg" alt="mobilemenu">
     </div>

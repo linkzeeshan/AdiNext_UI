@@ -177,4 +177,51 @@
         font-size: 16px;
         padding:10px 0px;
       }
+
+
+      .image-upload-icon{
+        width: 20px;
+        height: 20px;
+        position: absolute;
+        right: 67px;
+        top: 35px;
+        svg{
+          width:20px;
+          height: 20px;
+        }
+      }
+      
+      .chat-search{
+        padding-right:35px;
+      }
+
+      .upload-box{
+        background: #fafafa;
+        border-radius: 10px;
+        border:2px dashed rgb(236, 28, 28);
+        text-align: center;
+        width: 100%;
+        min-height: 200px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+      }
+
+      .upload-box svg{
+        width: 30px;
+        height: 30px;
+      }
+      .image-upload-buttons{
+        margin-top: 20px;
+        gap: 12px;
+        justify-content: end;
+      }
+      .image-upload-buttons button{
+        border-radius: 8px;
+      }
+      .image-upload-buttons .upload{
+        background:#ed1c24;
+        color:#fff;
+      }
       
