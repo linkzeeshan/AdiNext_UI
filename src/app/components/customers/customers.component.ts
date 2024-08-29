@@ -8,27 +8,28 @@ import { CustomersService } from '../../services/customers.service';
 @Component({
   selector: 'app-customers',
   standalone: true,
-  imports: [RouterLinkActive, NavbarComponent,HeaderComponent],
+  imports: [RouterLinkActive, NavbarComponent, HeaderComponent],
   templateUrl: './customers.component.html',
   styleUrl: './customers.component.css'
 })
-export class CustomersComponent implements OnInit{
-Customers:any = [];
+export class CustomersComponent implements OnInit {
+  Customers: any = [];
 
-constructor(private customerservice:CustomersService) {
-  
-  
-}
-ngOnInit(): void {
-   this.GetOrderShipments();
-}
-GetOrderShipments(){
+  constructor(private customerservice: CustomersService) {
 
-  this.customerservice.GetCustomer(1, 10)
-  .subscribe((res : any) =>{
-    console.log(res);
-    this.Customers = res.Data.$values;
-    
-  });
-}
+
+  }
+  ngOnInit(): void {
+    this.GetOrderShipments();
+  }
+  GetOrderShipments() {
+
+    this.customerservice.GetCustomer(1, 10)
+      .subscribe((res: any) => {
+        console.log(res);
+        this.Customers = res.Data.$values;
+
+      });
+  }
+  openOrderDetailPage() { }
 }

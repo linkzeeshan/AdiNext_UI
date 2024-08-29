@@ -28,7 +28,7 @@ export const routes: Routes = [
     { path: 'orderdetails', component: OrderDetailsComponent },
     { path: 'CustomerInfo', component: CreateOrUpdateCustomerComponent },
     { path: 'Customers', component: CustomersComponent },
-    { path: 'create-new-order', component: CreateNewOrderComponent },
+    { path: 'createorder', component: CreateNewOrderComponent },
 
     // { path: 'home', component: HomeComponent, canActivate:[authGuard] },
     // { path: 'design', component: DesignComponent, canActivate:[authGuard]},

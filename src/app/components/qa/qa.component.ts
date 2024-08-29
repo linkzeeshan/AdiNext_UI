@@ -1,29 +1,83 @@
 import { Component, OnInit } from '@angular/core';
 import { NavbarComponent } from '../navbar/navbar.component';
-import { RouterLinkActive } from '@angular/router';
+import { Router, RouterLinkActive } from '@angular/router';
 import { HeaderComponent } from '../header/header.component';
+import { HttpClient } from '@angular/common/http';
 import { HomeService } from '../../services/home.service';
 @Component({
   selector: 'app-qa',
   standalone: true,
-  imports: [RouterLinkActive, NavbarComponent,HeaderComponent],
+  imports: [RouterLinkActive, NavbarComponent, HeaderComponent],
   templateUrl: './qa.component.html',
   styleUrl: './qa.component.css'
 })
 export class QaComponent implements OnInit {
- qualityAssurances:any = [];
-  constructor(private homeservice: HomeService) {
-    
+  qualityAssurances: any = [];
+  productions: any = [];
+  orders: any = [];
+  designs: any = [];
+  deliveredOrders: any = [];
+  cancelledOrders: any = []
+  /**
+   *
+   */
+  constructor(private http: HttpClient, private router: Router, private homeservice: HomeService) {
+  }
+  ngOnInit(): void {
+    this.DesingPage();
+  }
+  DesingPage() {
+
+    this.homeservice.GetDesigns(1, 10)
+      .subscribe((res: any) => {
+        this.designs = res.Items.$values;
+      });
+  }
+  getHomeData() {
+
+    this.homeservice.GetOrders(1, 10)
+      .subscribe((res: any): void => {
+        this.orders = res.Items.$values;
+        console.log(this.orders);
+      });
+
+    this.homeservice.GetDesigns(1, 10)
+      .subscribe((res: any) => {
+        this.designs = res.Items.$values;
+        console.log("this is desing array");
+        console.log(this.designs);
+      });
+
+    this.homeservice.GetProductions(1, 10)
+      .subscribe((res: any) => {
+        this.productions = res.Items.$values;
+        console.log("this is desing array");
+        console.log(this.productions);
+      });
+
+    this.homeservice.GetQualityAssurances(1, 10)
+      .subscribe((res: any) => {
+        this.qualityAssurances = res.Items.$values;
+        console.log("this is desing array");
+        console.log(this.qualityAssurances);
+      });
+
+  }
+  openOrderDetailPage() {
+    this.router.navigateByUrl('/orderdetails');
+  } rderInProduction() {
+
+    this.homeservice.GetProductions(1, 10)
+      .subscribe((res: any) => {
+        this.productions = res.Items.$values;
+      });
   }
 
-ngOnInit(): void {
-   this.GetOrderInQA();
-}
-GetOrderInQA(){
+  GetOrderInQA() {
 
-  this.homeservice.GetQualityAssurances(1, 10)
-  .subscribe((res : any) =>{
-    this.qualityAssurances = res.Items.$values;
-  });
-}
+    this.homeservice.GetQualityAssurances(1, 10)
+      .subscribe((res: any) => {
+        this.qualityAssurances = res.Items.$values;
+      });
+  }
 }
